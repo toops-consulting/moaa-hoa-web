@@ -1,0 +1,345 @@
+@charset "utf-8";
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+/*	background-color: #4E5869;  */
+	background-image: url(../graphics/texture/002-Watercolor-Paper.png);
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+}
+/*  h3 exception - want a 10 margin bottom */
+h3 {
+	margin-bottom: 10px;
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color:#414958;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #4E5869;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom:3em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 5px;
+    width: 80%;
+/*	border-style : inset;
+	border-width : 10px;
+	width : 66%;  */
+}
+
+/* ~~ this container surrounds all other divs giving them their percentage-based width ~~ */
+.container {
+	width: 80%;
+	max-width: 775px;/* a max-width may be desirable to keep this layout from getting too wide on a large monitor. This keeps line length more readable. IE6 does not respect this declaration. */
+	min-width: 775px;/* a min-width may be desirable to keep this layout from getting too narrow. This keeps line length more readable in the side columns. IE6 does not respect this declaration. */
+	background-color: #FFF;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout. It is not needed if you set the .container's width to 100%. */
+}
+
+.map-image {
+	margin-left: 66px;
+
+}
+/* ~~the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo~~ */
+.header {
+	/*background-color: #6F7D94; */
+	background-image : url(../graphics/texture/002-Watercolor-Paper.png);
+	height : 150;
+/*	position : fixed;  */
+}
+
+.header-table
+	{
+/*		position : fixed;  */
+		vertical-align : top;
+		padding : 10;
+		padding-left : 10;
+		padding-right: 10;
+		background-image:url(../graphics/texture/002-Watercolor-Paper.png);
+	
+	}
+	
+.horiz-menu {
+	background-color:#fff;
+	background-image: url(../graphics/texture/002-Watercolor-Paper.png);
+	min-height : 35px;
+	margin-left: auto;
+	margin-right: auto;
+/*	position : fixed;  */
+}
+
+/* ~~ This is the layout information. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the div. The elements within this div have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+
+*/
+.content {
+	margin-top: 10px;
+	padding: 10px 10px;
+	height: 100%;
+	width : 100%;
+	/*overflow: scroll; */
+	/*display : block; */
+}
+
+.content-iframe {
+	width : 680;
+}
+/* ~~ This grouped selector gives the lists in the .content area space ~~ */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
+}
+/* ~~ The Map/Directions div */
+.map-directions {
+	left:auto;
+	text-align: left;
+	border: none;
+}
+.getadobe {
+	font-size : 75%;
+}
+/* ~~ The footer ~~ */
+.footer {
+	padding: 10px 0;
+	/*background-color: #6F7D94; */
+	background-image:url(../graphics/texture/002-Watercolor-Paper.png);
+}
+
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+/*  formatting for Leadership Table  */
+.tbl-leaders {
+	margin-left: 25px;
+	border: thin solid #000000;
+}
+.th-pos {
+	border-bottom: thin solid #000000;
+	margin-left:45px;
+	text-align: left;
+	color: #005d93;
+	width:200px;
+}
+.th-rank { 
+	border-bottom: thin solid #000000;
+	text-align: left;
+	color: #c24033;
+	width:100px;
+}
+.th-officer{
+	border-bottom: thin solid #000000;
+	text-align: left;
+	color: #005d93;
+	width:350px;
+}
+.td-pos {
+	border-bottom: thin solid #CCCCCC;
+	margin-left: 45px;
+	text-align: left;
+	border: thin solid;
+	width: 200px;
+}
+.td-rank { 
+	border-bottom: thin solid #CCCCCC;
+	text-align: left;
+	border: thin solid;
+	width: 100px;
+}
+.td-officer{
+	border-bottom: thin solid #CCCCCC;
+	text-align: left;
+	border: thin solid;
+	width: 350px;
+}
+/*  Luncheon Calendar table */
+.tbl-luncheon {
+	width: 650px;
+	margin-left: 25px;
+	border: thin solid #000000;
+}
+.td-cal{
+	height: 25px;
+/*	width: 250px;  */
+	border-bottom: thin solid #000000;
+}
+.td-calhdr{
+/*	height: 40px;*/
+/*	width: 250px;  */
+	font-weight: 800;
+/*	color : red;  */
+	border-bottom: thin solid #c24033;
+	padding-top: 10px;
+}
+
+.td-calimg {
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 5px;
+}
+
+.alert {
+	color: #ff0000;
+	font-weight : 900;
+}
+
+.tbl-scholar  {
+	width : 95%;	
+	border-style : solid;
+	border-width : 3px;
+	margin : 10px;
+}
+
+.td-head {
+	border-bottom : solid;
+	border-width : 1px;
+	margin : 10px;
+/*	padding : 10px;  */
+	padding-bottom: 5px;
+	padding-top: 5px;
+	margin-bottom: 15px;
+	font-weight : 700;
+}
+
+.td-entry { 
+	/*margin : 3px;  */
+	text-align: justify;
+	padding-top: 10px;
+	margin-top: 5px;
+	margin-left : 10px;
+	margin-right : 10px;
+/*	padding 10px;  */
+	
+}
+
+.va-photos {
+	position: abosolute;
+	right: 15px;
+	margin : 15px;
+}
+
+.ital {
+	font-family: "Comic Sans MS", cursive;
+	font-size:large;
+	margin-left: 30px;
+	font-weight: 700;
+	color: #aa0000;
+}
+
+.pg-head {
+	margin-bottom: 0px;
+	padding-bottom: 0px;	
+}
+
+.photogrp {
+		width: 100%;
+		background-color: #00006A;
+		margin: 20px;
+}
+
+.photoback {
+	background-color: #aaaaaa;
+/*  width: 470px;
+	height: 270px;  */
+	padding: 5px;
+	left: 15px;
+}
+
+.eventphoto {
+	border:thick #ffffff inset;
+/*	margin: 5px;  */
+}
+
+.phototag {
+	font-size: x-small;
+	font-style: italic;
+	width: 470px;
+	padding-bottom: 10px;
+}
+
+#spec-2015 {
+	display: block;
+	visibility: visible;
+}
+
+.meethdr {
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+.micro {
+	font-size: xx-small;
+	font-style: italic;
+	color: #00006a;
+}
+
+.img-clipart {
+	padding: 10px;
+}
+
+#meet-2019, #meet-2018, #meet-2017, #meet-2016, #meet-2015, #meet-2014, .va-photos, .picnic-photos{
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 5px;
+	margin-bottom: 1.5em;
+	border-bottom: thin solid black;
+	display: none;
+}
+
+#meet-2019 {
+	display: inline-block;
+}
+
+.meet-img {
+	float: left;
+	/*display: inline-block; */
+	max-width: 30%;
+	height: 20%;
+	margin: 0 0 0 1%;
+	border:thick #ffffff inset;
+}
+
+.signature {
+	font-weight: 600;
+	margin-top: 1em;
+	margin-left: 45%;
+	margin-bottom: 3em;
+}

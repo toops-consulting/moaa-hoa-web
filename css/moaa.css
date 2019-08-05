@@ -1,0 +1,105 @@
+
+body { 
+   background-image:url("../moaa_hep.jpg");
+   background-attachment:fixed;
+   background-repeat:no-repeat;
+   background-position:center; 
+}
+
+ 
+
+/* old background image: moaa_sh_fade.jpg  */ 
+
+H1 { 
+	color: #cc0000; 
+}
+
+H2 { 
+	color: #003399; 
+}
+
+H3 { color: #003399;
+	font-size: 15pt;
+}
+
+/* this section for navigation section */
+
+div.nav {
+	margin-left:0px;
+	margin-top:0px;
+	position:fixed
+}
+
+table.nav {
+	margin-top: 0px;
+	width: auto;
+}
+
+td.nav {
+	font-size: 10pt;
+	height: 10px;
+	text-align: left;
+	border: none;
+}
+
+td.border {
+	border-left: solid blue 2px;
+	width: 3px;
+}
+
+
+
+/* this section for page elements */
+
+div.page {
+	position: absolute;
+	left: 170px;
+	width: 600px;
+	top:20px;
+}
+
+div.page table {
+	padding: 1em;
+	width: auto;
+	margin-top: 0px;
+	border: 1em;
+}
+
+table.page {
+	padding: 1em;
+	width: auto;
+	margin-top:0px;
+	border: 1;
+}
+
+table.page caption {
+	text-align: left;
+	box-align: bottom;
+	font-size: 7pt;
+}	     	  	
+
+td.page  {
+	text-align: top;
+	padding: 1em;
+	border:1;
+}
+
+/* this is for the foot showing the last date and time the page was updated */
+p.updated {
+		   font-size: 7pt;
+		   width: 300px;
+}
+
+/* this is for alternating colored rows in tables  */
+tr.even {
+	background-color:pink;
+}
+
+tr.odd {
+	background-color:#FFFFFF;
+}
+
+tr.head_row {
+	background-color:red;
+}
+
